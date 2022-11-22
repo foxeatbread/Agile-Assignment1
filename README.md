@@ -1,12 +1,16 @@
 # Agile-Assignment1
 Creator:Haoxuan Gu
 github: https://github.com/foxeatbread/Agile-Assignment1.git
+
 gitlab: https://gitlab.com/GuHaoxuan/agile-assignment1.git
+
 youtube: https://www.youtube.com/watch?v=N7QJ3aWBAbQ
 
 ## Overview
 This is the Class Agile Assignment1 project, we learnt how to ues practical technology --Cypress, 
+
 how to control git repository,
+
 how to use CI pipeline test by .yml file.
 
 ## Feature:
