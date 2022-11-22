@@ -76,7 +76,7 @@ describe("Base tests", () => {
       cy.get(".MuiBox-root").find("p").contains("Overview");
       cy.get(".MuiBox-root").find("p").contains(movie.overview);
 
-    })
+    });
     it(" displays the charactors", () => {  
       cy.get(".MuiContainer-root").find("p").contains("Cast");
       cy.log(movies_credit_people);
@@ -86,9 +86,9 @@ describe("Base tests", () => {
         const actorChipLabels = movies_credit_people.map((g) => g.name);
         cy.get("p").each(($card, index) => {
           cy.wrap($card).contains(actorChipLabels[index]);
-        })
-      })
-    })
+        });
+      });
+    });
   });
 
   describe("The actor details page", () => {
@@ -111,25 +111,20 @@ describe("Base tests", () => {
           details = response;
         });
 
-    })
+    });
     it(" displays the actor name", () => {
       cy.get("p").contains(movies_credit_people[0].name)
-    })
+    });
     it(" displays the actor information", () => {
-      cy.get(".css-nen11g-MuiStack-root").find("span").contains("Gender:")
-      cy.get(".css-nen11g-MuiStack-root").find("span").contains("Birthday:")
-      cy.get(".css-nen11g-MuiStack-root").find("span").contains("Place of Birth:")
-      cy.get(".css-nen11g-MuiStack-root").find("span").contains("Main genre:")
-      cy.get(".css-nen11g-MuiStack-root").find("span").contains("Another Name:")
-      cy.get(".css-nen11g-MuiStack-root").find("span").contains("Homepage:")
-      cy.get(".css-nen11g-MuiStack-root").find("p").contains(details.gender==2? 'Male': 'Female')
-      cy.get(".css-nen11g-MuiStack-root").find("p").contains(details.birthday)
-      cy.get(".css-nen11g-MuiStack-root").find("p").contains(details.place_of_birth)
-      cy.get(".css-nen11g-MuiStack-root").find("p").contains(details.known_for_department)
-      cy.get(".css-nen11g-MuiStack-root").find("p").contains(details.homepage)
-    })
+      cy.get(".css-nen11g-MuiStack-root").find("span").contains("Gender:");
+      cy.get(".css-nen11g-MuiStack-root").find("span").contains("Birthday:");
+      cy.get(".css-nen11g-MuiStack-root").find("span").contains("Place of Birth:");
+      cy.get(".css-nen11g-MuiStack-root").find("p").contains(details.gender==2? 'Male': 'Female');
+      cy.get(".css-nen11g-MuiStack-root").find("p").contains(details.birthday);
+      cy.get(".css-nen11g-MuiStack-root").find("p").contains(details.place_of_birth);
+    });
     it(" displays the actor Biography", () => {
       cy.get(".css-nen11g-MuiStack-root").find("p").contains("Biography......")
-    })
-  })
+    });
+  });
 });
