@@ -27,7 +27,7 @@ const TemplateMoviePage = ({ movie, children }) => {
             setMovieCredits(credits)
           }
         })
-    },[])//
+    })//
     
 
     const {error, isLoading, isError } = useQuery(
@@ -41,7 +41,7 @@ const TemplateMoviePage = ({ movie, children }) => {
     
       const CastContainer = (data) => {
     
-        if(!data.movieCredits || data.movieCredits.length == 0) {
+        if(!data.movieCredits || data.movieCredits.length === 0) {
           return
         }
         else {
