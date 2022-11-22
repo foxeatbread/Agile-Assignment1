@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, lazy, Suspense} from "react";
 import { useParams } from 'react-router-dom';
-import { getActorDetails } from '../api/tmdb-api'
-import Spinner from '../components/spinner'
 import { useQuery } from "react-query";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Paper from '@mui/material/Paper';
+const getActorDetails = lazy(() => import('../api/tmdb-api'));
+const Spinner = lazy(() => import('../components/spinner'));
+
 const ActorPage = (props) => {
   const { id } = useParams();
   const { data: details, error, isLoading, isError } = useQuery(
