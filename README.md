@@ -30,3 +30,9 @@ added the test of pagination.cy.js, review.cy.js, search.cy.js and all of them a
  ![](readme_source\bundling.png)
 
  Every page splitted
+
+ # CI Test
+Test Result:
+
+ ![](readme_source\pipelineTest.png)
+ 
