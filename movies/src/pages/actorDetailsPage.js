@@ -30,13 +30,14 @@ const ActorPage = (props) => {
     <>
     <p style={{fontSize: '2.5rem', fontWeight: 'bold'}}>{details.name}</p>
       <Grid container direction="row" justifyContent="flex-start">    
-        <Grid item xs={2.5}>
+        <>
+        <Grid>
           <img style={{maxWidth: '280px', marginLeft:'50px'}} 
           src={`https://image.tmdb.org/t/p/w500/${details.profile_path}`} 
           alt={details.profile_path}/>
         </Grid>
              
-        <Grid item xs={6}>
+        <Grid>
           <Stack>
             <p style={{fontSize: '1.2rem'}}><span style={{fontWeight: 'bolder',whiteSpace:'pre'}}>Gender:   </span>{details.gender==2? 'Male': 'Female'}</p>
           </Stack>
@@ -64,13 +65,13 @@ const ActorPage = (props) => {
 
           </Grid>
           
-          <Grid item xs="12">
+          <Grid>
             <Stack style={{marginLeft:'50px', marginLeft:'50px'}}>
               <p style={{fontSize: '1.5rem', fontWeight: 'bold'}}>Biography......</p>
               <p style={{fontSize: '1.2rem'}}>{details.biography}</p>
             </Stack>  
           </Grid>
-
+          </>
       </Grid>
     </>
   )
