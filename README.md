@@ -15,9 +15,7 @@ added the test of pagination.cy.js, review.cy.js, search.cy.js and all of them a
 
 # Branch policy:
  
- All the test ----> develop -----> main
-                ↑              ↑
-              merge          merge
+ All the test --merge--> develop --merge---> main
 
 # Bundling/Code splitting:
  
