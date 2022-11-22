@@ -1,10 +1,10 @@
-import React from "react";
+import React, { lazy, Suspense} from "react";
 import { useParams } from 'react-router-dom';
-import MovieDetails from "../components/movieDetails/";
-import PageTemplate from "../components/templateMoviePage";
-import { getMovie } from '../api/tmdb-api'
 import { useQuery } from "react-query";
-import Spinner from '../components/spinner'
+const MovieDetails = lazy(() => import("../components/movieDetails/"));
+const PageTemplate = lazy(() => import("../components/templateMoviePage"));
+const getMovie = lazy(() => import('../api/tmdb-api'));
+const Spinner = lazy(() => import('../components/spinner'));
 
 const MoviePage = (props) => {
   const { id } = useParams();
