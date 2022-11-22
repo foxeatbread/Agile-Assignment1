@@ -6,6 +6,8 @@ changed the test of base.cy.js, favourite.cy.js, navigation.cy.js. There's nothi
 
 added the test of pagination.cy.js, review.cy.js, search.cy.js and all of them are working well
 
+![](readme_source\testResult.png)
+
 # Some cypress Custom commands like 
  Cypress.Commands.add('clickButton', (label) => {
    cy.get('button').contains(label).click()
