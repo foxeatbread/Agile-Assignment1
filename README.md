@@ -3,7 +3,7 @@
 
 # Links
 github: https://github.com/foxeatbread/Agile-Assignment1.git
-gitlab: https://gitlab.com/GuHaoxuan/moviesapp-ci.git
+gitlab: https://gitlab.com/GuHaoxuan/agile-assignment1.git
 youtube: https://www.youtube.com/watch?v=N7QJ3aWBAbQ
 
 # e2e test: 
@@ -37,7 +37,7 @@ There's nothing new of filtering so I didn't change it.
 
 + "Search the movie"
 
-![](readme_source\testResult.png)
+[](readme_source\testResult.png)
 
 # Some cypress Custom commands like 
  Cypress.Commands.add('clickButton', (label) => {
