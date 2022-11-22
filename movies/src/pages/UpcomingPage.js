@@ -1,9 +1,9 @@
-import React from "react";
-import PageTemplate from '../components/templateMovieListPage'
-import { getUpcomingMovies } from "../api/tmdb-api";
+import React ,{lazy, Suspense}from "react";
 import { useQuery } from 'react-query';
-import Spinner from '../components/spinner';
-import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
+const Spinner = lazy(() => import('../components/spinner'));
+const PageTemplate = lazy(() => import('../components/templateMovieListPage'));
+const getUpcomingMovies = lazy(() => import("../api/tmdb-api"));
+const AddToFavoritesIcon = lazy(() => import('../components/cardIcons/addToFavorites'));
 
 const HomePage = () => {
 
@@ -24,13 +24,15 @@ const HomePage = () => {
   // const addToFavorites = (movieId) => true 
 
   return (
-    <PageTemplate
-      title="Upcoming Movies"
-      movies={movies}
-      action={(movie) => {
-        return <AddToFavoritesIcon movie={movie} />
-      }}
-    />
+    <Suspense fallback={<h1>Page template list</h1>}>
+      <PageTemplate
+        title="Upcoming Movies"
+        movies={movies}
+        action={(movie) => {
+          return <AddToFavoritesIcon movie={movie} />
+        }}
+      />
+    </Suspense>
 );
 };
 export default HomePage;
