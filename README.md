@@ -26,3 +26,5 @@ added the test of pagination.cy.js, review.cy.js, search.cy.js and all of them a
  Avaliable on: http://172.16.129.55:8080/
 
  ![](readme_source\bundling.png)
+
+ Every page splitted
