@@ -1,7 +1,7 @@
-import React from "react";
+import React ,{lazy, Suspense }from "react";
 import { useLocation } from "react-router-dom";
-import PageTemplate from "../components/templateMoviePage";
-import MovieReview from "../components/movieReview";
+const PageTemplate  = lazy(() => import("../components/templateMoviePage"));
+const MovieReview = lazy(() => import("../components/movieReview"));
 
 const MovieReviewPage = (props) => {
   let location = useLocation();
@@ -9,9 +9,11 @@ const MovieReviewPage = (props) => {
   
 
   return (
-    <PageTemplate movie={movie}>
-      <MovieReview review={review} />
-    </PageTemplate>
+    <Suspense fallback={<h1>Page template list</h1>}>
+      <PageTemplate movie={movie}>
+        <MovieReview review={review} />
+      </PageTemplate>
+    </Suspense>
   );
 };
 
