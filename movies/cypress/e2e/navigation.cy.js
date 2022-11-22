@@ -6,7 +6,7 @@ Cypress.Commands.add('clickButton', (label) => {
 })
 Cypress.Commands.add('clickLink', (item,num,label) => {
   cy.get(item).eq(num).contains(label).click()
-}) // Enola Holmes movie id
+})
 
 describe("Navigation", () => {
   before(() => {
